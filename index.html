@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakery Delights</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #faf7f2;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 32px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+    p {
+      color: #666;
+      margin-bottom: 32px;
+    }
+    .products {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      margin-top: 24px;
+    }
+    .product {
+      padding: 24px 16px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      background: #f9f6f2;
+    }
+    .product h2 {
+      margin: 0 0 8px 0;
+      font-size: 1.3rem;
+      color: #7c4d2b;
+    }
+    .product p {
+      margin: 0;
+      color: #444;
+      font-size: 1rem;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Bakery Delights</h1>
+    <p>Freshly baked treats, made with love and the finest ingredients.</p>
+    <div class="products">
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Brownie" style="width:100%;max-width:220px;border-radius:6px;margin-bottom:12px;" />
+        <h2>Brownie</h2>
+        <p>Rich, fudgy chocolate brownies with a crackly top. Perfectly decadent and irresistible.</p>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="Banana Loaf" style="width:100%;max-width:220px;border-radius:6px;margin-bottom:12px;" />
+        <h2>Banana Loaf</h2>
+        <p>Moist and flavorful banana loaf, made with ripe bananas and a hint of cinnamon.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html> 
