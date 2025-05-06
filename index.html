@@ -3,44 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bakery Delights</title>
+  <title>Welcome to Veda's Bakehouse</title>
   <style>
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #faf7f2;
-      color: #333;
+    html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #333;
     }
-    .container {
-      max-width: 600px;
-      margin: 60px auto;
-      padding: 32px;
-      background: #fff;
+    .section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .welcome {
+      background: url('bg1.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .welcome h1 {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 32px 48px;
+      border-radius: 16px;
+      font-size: 2.5rem;
+      color: #7c4d2b;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .welcome p {
+      background: rgba(255,255,255,0.7);
+      padding: 16px 32px;
       border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      font-size: 1.2rem;
+      color: #555;
       text-align: center;
     }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 8px;
-      letter-spacing: 1px;
-    }
-    p {
-      color: #666;
-      margin-bottom: 32px;
-    }
-    .products {
+    .product-section {
+      background: #faf7f2;
+      min-height: 100vh;
       display: flex;
-      flex-direction: column;
-      gap: 32px;
-      margin-top: 24px;
+      align-items: center;
+      justify-content: center;
     }
     .product {
-      padding: 24px 16px;
+      padding: 32px 24px;
       border: 1px solid #eee;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      text-align: center;
+      max-width: 340px;
+    }
+    .product img {
+      width: 100%;
+      max-width: 220px;
       border-radius: 8px;
-      background: #f9f6f2;
+      margin-bottom: 16px;
     }
     .product h2 {
       margin: 0 0 8px 0;
@@ -53,28 +74,37 @@
       font-size: 1rem;
     }
     @media (max-width: 600px) {
-      .container {
-        padding: 16px;
-      }
+      .product { padding: 16px 8px; }
+      .welcome h1 { font-size: 1.5rem; padding: 16px 12px; }
+    }
+    .product-section.brownie {
+      background: url('brownieBg.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .product-section.banana {
+      background: url('bread-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Bakery Delights</h1>
-    <p>Freshly baked treats, made with love and the finest ingredients.</p>
-    <div class="products">
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Brownie" style="width:100%;max-width:220px;border-radius:6px;margin-bottom:12px;" />
-        <h2>Brownie</h2>
-        <p>Rich, fudgy chocolate brownies with a crackly top. Perfectly decadent and irresistible.</p>
-      </div>
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="Banana Loaf" style="width:100%;max-width:220px;border-radius:6px;margin-bottom:12px;" />
-        <h2>Banana Loaf</h2>
-        <p>Moist and flavorful banana loaf, made with ripe bananas and a hint of cinnamon.</p>
-      </div>
+  <section class="section welcome">
+    <h1>Bite Into Bliss at Veda's Bakehouse</h1>
+    <p>Freshly baked breads and pastries made with love and the finest ingredients.</p>
+  </section>
+  <section class="section product-section brownie">
+    <div class="product">
+      <img src="brownie.jpg" alt="Brownie" />
+      <h2>Brownie</h2>
+      <p>Rich, fudgy chocolate brownies with a crackly top. Perfectly decadent and irresistible.</p>
     </div>
-  </div>
+  </section>
+  <section class="section product-section banana">
+    <div class="product">
+      <img src="bananaBread.jpg" alt="Banana Loaf" />
+      <h2>Banana Loaf</h2>
+      <p>Moist and flavorful banana loaf, made with ripe bananas and a hint of cinnamon.</p>
+    </div>
+  </section>
 </body>
 </html> 
